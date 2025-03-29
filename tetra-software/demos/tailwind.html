@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Tetra Software - Demo - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<div class="content">
+		<h1 class="text-3xl font-bold"> Tailwind CSS Demo</h1>
+		<button class="m-3 px-4 py-1 text-sm text-red-600 font-semibold rounded-full border border-red-600 hover:text-white hover:bg-red-600 transition ease-in-out active:bg-red-700 focus:ring focus:ring-red-700" id="show-popup">Show Popup</button>
+		<div class="invisible p-6 max-w-sm mx-auto bg-slate-900 rounded-xl shadow-lg flex items-center space-x-4 opacity-0 transition-opacity ease-in-out duration-300 shadow-2xl" id="popup">
+  			<div class="shrink-0">
+    				<img class="h-12 w-12" src="../logos/tetra_logo128.png" alt="Tetra Logo">
+  			</div>
+  			<div>
+    				<div class="text-xl font-medium text-white">Tetra Software</div>
+    				<p class="text-slate-300">This is a demo popup</p>
+  			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	function visible(x)
+	{
+		x.classList.remove("invisible");
+		x.classList.add("visible");
+	}
+
+	function invisible(x)
+	{
+		x.classList.remove("visible");
+		x.classList.add("invisible");
+	}
+
+	function setOpacity(x, opacity)
+	{
+		for (let i = 0; i < x.classList.length; i++)
+		{
+			var className = x.classList[i];
+            		if (className.startsWith("opacity-"))
+            		{
+                		x.classList.remove(className);
+            		}
+		}
+        	var newClass = "opacity-" + opacity;
+        	x.classList.add(newClass);
+	}
+
+	function fadeOut(x)
+	{
+        	setOpacity(x, 0);
+        	setTimeout(() => invisible(x), 300);
+	}
+
+	function fadeIn(x)
+	{
+		visible(x);
+        	setOpacity(x, 100);
+	}
+
+
+	var eShowPopup = document.getElementById("show-popup");
+	eShowPopup.addEventListener("click", () => fadeIn(document.getElementById("popup")), false);
+</script>

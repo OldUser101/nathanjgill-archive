@@ -1,0 +1,1 @@
+This update provides a new update service for Blackjack.

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Tetra Software - PWORD</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+</head>
+<body>
+    
+        <header class="header-panel">
+            <div class="company-info">
+                <img src="../logos/tetra_logo64.png" alt="Tetra Software Logo" width="64" height="64">
+                <div>
+                    <h1>Tetra Software</h1>
+                    <p><strong>E-mail: <a href="mailto:tetra_software@outlook.com">tetra_software@outlook.com</a></strong></p>
+                </div>
+            </div>
+        </header>
+
+        <div class="menu">
+            <div class="item">
+                <p><a href="../index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12l7-7 7 7"/>
+                        <path d="M5 12v12h5V17h4V24h5V12M5 12z"/>   
+                    </svg>
+                    Home
+                </a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="../software.html">Software</a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="../docs.html">Documentation</a></p>
+            </div>
+            <div class="item">
+                <p><a href="../news.html">News</a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="../about.html">About</a></p>
+            </div>
+        </div>
+    
+            <div class="content">
+                <h2>PWORD</h2>
+                <p>PWORD is a fast and efficient password generation utility that runs over the command line to generate your passwords.</p>
+                <a href="../download/pword.zip"><button class="download-button">Download PWORD</button></a>
+                <h2>How to download:</h2>
+                <p><strong>Step 1:</strong> Download PWORD by pressing the download button above.</p>
+                <p><strong>Step 2:</strong> Extract <strong>"pword.zip"</strong> into a folder of your choice.</p>
+                <p><strong>Step 3:</strong> Open a <strong>Command Prompt</strong> window and navigate to the folder where you extracted <strong>"pword.zip"</strong>.</p>
+                <p><strong>Step 4:</strong> Use the guide below to start generating passwords with PWORD.</p>
+		<h2>How to use:</h2>
+		<p><strong>Command line:</strong> pword [length] {/N:number} [{/D} {/U} {/L} {/N} {/P} {/S}]</p>
+		<p><strong>Syntax:</strong> <br><strong>[]</strong> - Denotes a section<br>	<strong>{}</strong> Denotes a optional argument</p>
+		<p><strong>Arguments:</strong></p>
+		<ul>
+			<li><strong>length	:</strong>  Length of the password to generate.</li>
+			<li><strong>/N:number	:</strong>  Number of passwords to generate.</li>
+			<li><strong>/D		:</strong>  Use default settings (uppercase letters, lowercase letters, and numbers).</li>
+			<li><strong>/U		:</strong>  Include uppercase letters.</li>
+			<li><strong>/L		:</strong>  Include lowercase letters.</li>
+			<li><strong>/I		:</strong>  Include numbers.</li>
+			<li><strong>/S		:</strong>  Include symbols (:;<=>?@!"#$&'()*+,-./).</li>
+		</ul>
+		<p><strong>Example:</strong> 'pword 12 /N:2 /U /L /I' : Generates two 12 character passwords that may include uppercase letters, lowercase letters, numbers, but not symbols.</p>
+
+            </div>
+
+	<div class="footer">
+		<img src="../logos/tetra_logo64.png" alt="Tetra Software Logo" width="64" height="64">
+		<p>Copyright (c) 2024 Nathan Gill</p>
+	</div>
+
+            <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var items = document.querySelectorAll('.item');
+
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var link = item.querySelector('a');
+                    if (link) {
+                        window.location.href = link.getAttribute('href');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

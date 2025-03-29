@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'DOS_VGA';
+    src: url('dosvga.eot');
+    src: url('dosvga.eot?#iefix') format('embedded-opentype'),
+        url('dosvga.woff2') format('woff2'),
+        url('dosvga.woff') format('woff'),
+        url('dosvga.ttf') format('truetype'),
+        url('dosvga.svg#PerfectDOSVGA437Win') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

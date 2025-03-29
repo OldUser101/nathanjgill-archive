@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'DOS_VGA';
+    src: url('fonts/dosvga.eot');
+    src: url('fonts/dosvga.eot?#iefix') format('embedded-opentype'),
+        url('fonts/dosvga.woff2') format('woff2'),
+        url('fonts/dosvga.woff') format('woff'),
+        url('fonts/dosvga.ttf') format('truetype'),
+		url('dosvga.svg#PerfectDOSVGA437Win') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --vga-black: #000000;
+    --vga-blue: #0000AA;
+    --vga-green: #00AA00;
+    --vga-cyan: #00AAAA;
+    --vga-red: #AA0000;
+    --vga-magenta: #AA00AA;
+    --vga-brown: #AA5500;
+    --vga-light-gray: #AAAAAA;
+
+    --vga-dark-gray: #555555;
+    --vga-light-blue: #5555FF;
+    --vga-light-green: #55FF55;
+    --vga-light-cyan: #55FFFF;
+    --vga-light-red: #FF5555;
+    --vga-light-magenta: #FF55FF;
+    --vga-yellow: #FFFF55;
+    --vga-white: #FFFFFF;
+}
+
+body {
+	background-color: #000000;
+	color: #AAAAAA;
+	font-family: monospace;
+	font-family: 'DOS_VGA';
+	overflow: scroll;
+	height: 100vw;
+}
+
+h1 {
+	font-size: clamp(1.5rem, 2vw + 0.5rem, 4rem);
+}
+
+#tetra_software,
+#tetra_software:visited 
+#tetra_software:active,
+#tetra_software:visited:active {
+	color: #FF5555;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 0px 5px 0px 5px;
+}
+
+#tetra_software:hover,
+#tetra_software:focus,
+#tetra_software:visited:hover,
+#tetra_software:visited:focus {
+	color: #000000;
+	background-color: #FF5555;
+}
+
+a {
+	color: #5555FF;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 0px 5px 0px 5px;
+}
+
+a:hover,
+a:focus {
+	color: #000000;
+	background-color: #5555FF;
+}
+
+a:active {
+	color: #5555FF;
+	background-color: #000000;
+}
+
+.localSideBar {
+	color: #FFFF55;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 0px 5px 0px 5px;
+}
+
+.localSideBar:hover,
+.localSideBar:focus {
+		color: #000000;
+	background-color: #FFFF55;
+}
+
+.localSideBar:active {
+	color: #FFFF55;
+	background-color: #000000;
+}
+
+#homepage,
+#homepage:visited 
+#homepage:active,
+#homepage:visited:active {
+	color: #FF55FF;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 0px 5px 0px 5px;
+}
+
+#homepage:hover,
+#homepage:focus,
+#homepage:visited:hover,
+#homepage:visited:focus {
+	color: #000000;
+	background-color: #FF55FF;
+}
+
+#headerLink,
+#headerLink:visited 
+#headerLink:active,
+#headerLink:visited:active {
+	color: #AAAAAA;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 0px 5px 0px 5px;
+}
+
+.content {
+	padding-top: 10px;
+	position: relative;
+	height: 100%;
+	opacity: 0;
+	animation: fadeIn 1s ease-in forwards;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-right: .1em solid white;
+	border-top: .1em solid white;
+	border-bottom: .1em solid white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: fixed;
+	overflow-y: auto;
+	transition: height 0.3s ease;
+	background-color: black;
+	z-index: 10;
+}
+
+.main {
+	z-index: 1;
+	padding-left: 20px;
+	margin-left: 250px;
+	margin-right: 20px;
+}
+
+#ContentsTitle {
+	width: 100%;
+	text-align: center;
+}
+
+.sideBarItem {
+	display: block;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+	border-right: none;
+  }
+  
+  .sidebar.hidden {
+	  height: 2em;
+	  transition: height 0.3s ease;
+  }
+  
+  .sidebar.expanded {
+	  height: auto;
+	  transition: height 0.3s ease;
+  }
+  
+  .main {margin-left: 0;}
+}
+	
+@supports (display : flex) {
+	#header-container {
+		overflow: clip;
+		display: flex;
+		justify-content: center;
+		background-color: #000000;
+		height: auto;
+	}
+}
+
+#header-container::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: var(--header-height);
+	background-color: #000000;
+	z-index: 9;
+}
+
+#header {
+	z-index: 10;
+	background-color: #000000;
+	overflow: clip;
+	white-space: nowrap;
+	font-family: 'DOS_VGA';
+	position: fixed;
+	border-right: .75em solid white;
+	margin: 0 auto;
+	animation:
+		typing 1.0s steps(25, end),
+		blink-caret 0.5s step-end infinite,
+		fade-caret 0.5s ease-in-out 1.0s forwards;
+}
+	
+@keyframes typing {
+	from { width: 0 }
+	to { width: 11ch }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: white; }
+}
+
+@keyframes fade-caret {
+	to { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.christmas {
+	background: transparent;
+	color: #55FF55;
+	white-space: nowrap;
+	position: relative;
+	overflow: hidden;
+	transition: text-shadow 0.5s ease-in-out;
+}
+
+.christmas:hover,
+.christmas:focus,
+.christmas:visited:hover,
+.christmas:visited:focus {
+	color: #55FF55;
+	background: transparent;
+	text-shadow: 0 0 10px #F7E7CE;
+}
+
+/*
+.christmas::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, #F7E7CE 5%, transparent 30%);
+	background-size: 8px 8px;
+	opacity: 0.8;
+	animation: sparkle 2s infinite ease-in-out;
+	z-index: -1;
+}
+
+@keyframes sparkle {
+	0%, 100% {
+		opacity: 0.1;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+*/

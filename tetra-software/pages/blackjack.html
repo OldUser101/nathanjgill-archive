@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Tetra Software - Blackjack</title>
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+</head>
+<body>
+    
+        <header class="header-panel">
+            <div class="company-info">
+                <img src="../logos/tetra_logo64.png" alt="Tetra Software Logo" width="64" height="64">
+                <div>
+                    <h1>Tetra Software</h1>
+                    <p><strong>E-mail: <a href="mailto:tetra_software@outlook.com">tetra_software@outlook.com</a></strong></p>
+                </div>
+            </div>
+        </header>
+
+        <div class="menu">
+
+            <div class="item">
+                <p><a href="../index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12l7-7 7 7"/>
+                        <path d="M5 12v12h5V17h4V24h5V12M5 12z"/>   
+                    </svg>
+                    Home
+                </a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="../software.html">Software</a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="../docs.html">Documentation</a></p>
+            </div>
+            <div class="item">
+                <p><a href="../news.html">News</a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="../about.html">About</a></p>
+            </div>
+
+
+        </div>
+    
+            <div class="content">
+                <h2>Blackjack</h2>
+                <p>Blackjack is a fast and complete game of Blackjack.</p>
+		<p><strong>Install:</strong></p>
+                <a href="../download/blackjack/latest/blackjack.zip"><button class="download-button">Download Blackjack Executable</button></a>
+		<p><strong>Update:</strong></p>
+		<a href="../download/blackjack/latest/blackjack.patch"><button class="download-button">Download Blackjack Update</button></a>
+                <h2>How to install:</h2>
+                <p><strong>Step 1:</strong> Download Blackjack by pressing the <strong>"Download Blackjack Executable"</strong> button above.</p>
+                <p><strong>Step 2:</strong> Extract <strong>"blackjack.zip"</strong> into a folder of your choice.</p>
+                <p><strong>Step 3:</strong> Follow the instructions in the file <strong>"INSTALL.TXT"</strong>.</p>
+		<h2>How to update:</h2>
+		<p><strong>Step 1:</strong> Download the latest patch by pressing the <strong>"Download Blackjack Update"</strong> button above.</p>
+		<p><strong>Step 2:</strong> Copy <strong>"blackjack.patch"</strong> into your Blackjack directoty and follow the instructions in the <strong>"INSTALL.TXT"</strong> file.</p>
+            </div>
+
+	
+	<div class="footer">
+		<img src="../logos/tetra_logo64.png" alt="Tetra Software Logo" width="64" height="64">
+		<p>Copyright (c) 2024 Nathan Gill</p>
+	</div>
+
+            <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var items = document.querySelectorAll('.item');
+
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var link = item.querySelector('a');
+                    if (link) {
+                        window.location.href = link.getAttribute('href');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

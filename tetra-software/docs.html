@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Tetra Software - Documentation</title>
+    <link rel="stylesheet" href="style.css" media="all" type="text/css">
+</head>
+<body>
+    
+        <header class="header-panel">
+            <div class="company-info">
+                <img src="logos/tetra_logo64.png" alt="Tetra Software Logo" width="64" height="64">
+                <div>
+                    <h1>Tetra Software - Documentation</h1>
+                    <p><strong>E-mail: <a href="mailto:tetra_software@outlook.com">tetra_software@outlook.com</a></strong></p>
+                </div>
+            </div>
+        </header>
+
+        <div class="menu">
+
+            <div class="item">
+                <p><a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12l7-7 7 7"/>
+                        <path d="M5 12v12h5V17h4V24h5V12M5 12z"/>   
+                    </svg> 
+                    Home
+                </a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="software.html">Software</a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="docs.html">Documentation</a></p>
+            </div>
+            <div class="item">
+                <p><a href="news.html">News</a></p>
+            </div>
+
+            <div class="item">
+                <p><a href="about.html">About</a></p>
+            </div>
+
+
+        </div>
+    
+    
+	<div class="footer">
+		<img src="logos/tetra_logo64.png" alt="Tetra Software Logo" width="64" height="64">
+		<p>Copyright (c) 2024 Nathan Gill</p>
+	</div>
+
+            <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var items = document.querySelectorAll('.item');
+
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var link = item.querySelector('a');
+                    if (link) {
+                        window.location.href = link.getAttribute('href');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
